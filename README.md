@@ -70,6 +70,30 @@ dotnet run
 
 ---
 
+## 📦 Exporting as a Single File Executable (.exe) with Icon
+
+This project is pre-configured with a premium, high-resolution application icon (`app.ico`). You can easily compile and export the entire application as a single self-contained or framework-dependent `.exe` file.
+
+Open your command-line terminal inside the project directory and execute one of the following commands:
+
+### Option A: Framework-Dependent Single File (Recommended - Compact Size)
+Generates a highly compact single `.exe` file (~1.15 MB). Requires the destination Windows machine to have the .NET Desktop Runtime installed.
+```powershell
+dotnet publish -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true
+```
+
+### Option B: Self-Contained Single File (Zero Dependencies)
+Packages the complete .NET runtime within the executable (~135 MB). This runs instantly on any 64-bit Windows machine, even without pre-installing any .NET runtimes.
+```powershell
+dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishReadyToRun=true
+```
+
+### Output Location
+After publishing completes, you can retrieve your ready-to-use `.exe` from:
+`D:\Projects\netbarcode_dotnet\bin\Release\net5.0-windows\win-x64\publish\`
+
+---
+
 ## 🔧 Customizable Templates
 
 You can modify configurations on-the-fly inside the **Label Setup** dialog:
