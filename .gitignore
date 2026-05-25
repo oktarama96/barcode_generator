@@ -1,0 +1,25 @@
+## Ignore Build Outputs
+bin/
+obj/
+
+## Visual Studio & MSBuild
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## IDE Settings
+.idea/
+.vscode/
+*.sln.DotSettings.user
+
+## OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Local Application Data / Templates
+template.json
+items.json
